@@ -1,7 +1,6 @@
 package org.genspark;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -50,7 +49,6 @@ public class Student {
     }
 
     @Autowired
-    @Qualifier("id")
     public void setId(int id) {
         this.id = id;
     }
@@ -60,12 +58,12 @@ public class Student {
         this.name = name;
     }
 
-    @Autowired(required = false)
+    @Autowired
     public void setPh(List<Phone> ph) {
         this.ph = ph;
     }
 
-    @Autowired(required = false)
+    @Autowired
     public void setAdd(Address add) {
         this.add = add;
     }
